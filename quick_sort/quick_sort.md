@@ -10,10 +10,6 @@ We’ll also discuss its advantages and disadvantages and then analyze its time 
 
 
 
-
-
-
-
 ## **2. QuickSort Algorithm**
 
 **[Quicksort](https://www.baeldung.com/cs/the-quicksort-algorithm) is a sorting algorithm, which is leveraging the [divide-and-conquer principle](https://www.baeldung.com/cs/divide-and-conquer-strategy).** It has an average *O(n log n)* complexity and it’s one of the most used sorting algorithms, especially for big data volumes.
@@ -22,7 +18,7 @@ We’ll also discuss its advantages and disadvantages and then analyze its time 
 
 （这句话的意思是：**快速排序不是一个稳定的排序算法。** 稳定的排序算法指的是在排序过程中能够保持具有相同值的元素在排序后的序列中保持它们在原始输入序列中的相对顺序不变。换句话说，如果有两个相等的元素 A 和 B，而在未排序的输入中 A 出现在 B 之前，那么在稳定排序算法处理后 A 依然会出现在 B 之前。
 
-快速排序之所以被认为是不稳定的，是因为在排序过程中可能会改变相等元素的原始相对顺序。在快速排序的分区过程中，相等的元素可能会因为分区操作而交换位置，从而失去它们在输入列表中的初始相对顺序。）
+快速排序之所以被认为是不稳定的，是因为在排序过程中可能会改变相等元素的原始相对顺序。   
 
 The input list is divided into two sub-lists by an element called pivot; one sub-list with elements less than the pivot and another one with elements greater than the pivot. This process repeats for each sub-list.
 

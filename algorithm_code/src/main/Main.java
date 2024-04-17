@@ -1,6 +1,6 @@
 package main;
 
-import main.java.algorithms.sort.QuickSort;
+import algorithm.sort.QuickSort;
 
 public class Main {
     public static void main(String[] args) {
