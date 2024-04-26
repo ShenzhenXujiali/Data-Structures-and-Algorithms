@@ -1,5 +1,1 @@
-package algorithm.sort;
-
-public class QuickSortTest {
-
-}
+//package algorithm.sort

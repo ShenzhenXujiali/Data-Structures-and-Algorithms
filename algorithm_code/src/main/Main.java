@@ -1,18 +1,22 @@
 package main;
 
 import algorithm.sort.QuickSort;
+import algorithm.sort.QuickSortTest;
 
-public class Main {
-    public static void main(String[] args) {
-        int[] arrayToSort = { 9, -3, 5, 2, 6, 8, -6, 1, 3 };
+public class Main{
+    public static void main(String[] args){
+        float [] arr = {1,4,3,2};
+        QuickSortTest qs = new QuickSortTest();
+        qs.quickSort(arr,0,arr.length-1);
 
-        QuickSort quickSorter = new QuickSort();
-        quickSorter.quickSort(arrayToSort, 0, arrayToSort.length - 1);
-
-        // Print out the sorted array
-        for (int i : arrayToSort) {
-            System.out.print(i + " ");
+        for (float v : arr) {
+            System.out.print(v + " ");
         }
+
+
     }
+
 }
+
+
 

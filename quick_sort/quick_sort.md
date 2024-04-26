@@ -67,13 +67,13 @@ public void quickSort(int arr[], int begin, int end) {
 
 
 
+
+
+
+
 Let’s continue with the *partition()* method. For simplicity, this function takes the last element as the pivot. Then, checks each element and swaps it before the pivot if its value is smaller.
 
 By the end of the partitioning, all elements less then the pivot are on the left of it and all elements greater then the pivot are on the right of it. The pivot is at its final sorted position and the function returns this position:
-
-
-
-
 
 
 
@@ -97,8 +97,73 @@ private int partition(int arr[], int begin, int end) {
     arr[end] = swapTemp;
 
     return i+1;
+    
+    
 }
 ```
+
+
+
+
+
+## The complete code
+
+```java
+public class QuickSort{
+    private int partition(int[] arr, int begin, int end) {
+        int pivot = arr[end];
+        int i = (begin-1);
+
+        for (int j = begin; j < end; j++) {
+            if (arr[j] <= pivot) {
+                i++;
+
+                int swapTemp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = swapTemp;
+            }
+        }
+
+        int swapTemp = arr[i+1];
+        arr[i+1] = arr[end];
+        arr[end] = swapTemp;
+
+        return i+1;
+    }
+
+    public void quickSort(int [] arr, int begin, int end) {
+        if (begin < end) {
+            int partitionIndex = partition(arr, begin, end);
+
+            quickSort(arr, begin, partitionIndex-1);
+            quickSort(arr, partitionIndex+1, end);
+        }
+    }
+
+}
+
+
+
+package main;
+
+import algorithm.sort.QuickSort;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] arrayToSort = { 9, -3, 5, 2, 6, 8, -6, 1, 3 };
+
+        QuickSort quickSorter = new QuickSort();
+        quickSorter.quickSort(arrayToSort, 0, arrayToSort.length - 1);
+
+        // Print out the sorted array
+        for (int i : arrayToSort) {
+            System.out.print(i + " ");
+        }
+    }
+}
+```
+
+
 
 
 
